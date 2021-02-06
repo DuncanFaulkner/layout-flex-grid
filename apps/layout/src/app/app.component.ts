@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IconService } from '../shared/services/icon.service';
 
 @Component({
   selector: 'anglebrackets-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'layout';
+
+  constructor(private iconService: IconService) {
+    this.iconService.registerIcons();
+  }
 }
