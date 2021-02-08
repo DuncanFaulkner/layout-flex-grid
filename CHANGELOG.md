@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/DuncanFaulkner/layout-flex-grid/compare/v0.0.2...v0.0.3) (2021-02-08)
+
+
+### Features
+
+* **scully:** add scully to the project ([bc81d30](https://github.com/DuncanFaulkner/layout-flex-grid/commit/bc81d3052fd53a471d418cb09070e86cd1fd947a))
+
 ### [0.0.2](https://github.com/DuncanFaulkner/layout-flex-grid/compare/v0.0.1...v0.0.2) (2021-02-07)
 
 
