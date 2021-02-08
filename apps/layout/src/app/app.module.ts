@@ -9,6 +9,7 @@ import { MaterialModule } from '../shared/modules/material.module';
 import { AppComponent } from './app.component';
 import { GuidesModule } from './guides/guides.module';
 import { HomeComponent } from './home/home.component';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 
 const routes: Routes = [
   {
@@ -25,6 +26,7 @@ const routes: Routes = [
     redirectTo: '',
     pathMatch: 'full',
   },
+  { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) },
 ];
 
 @NgModule({
@@ -38,6 +40,7 @@ const routes: Routes = [
     FlexLayoutModule,
     MaterialModule,
     GuidesModule,
+    ScullyLibModule,
   ],
   exports: [MaterialModule],
   providers: [MatIconRegistry],

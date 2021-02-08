@@ -7,6 +7,14 @@
     <h2>A sophisticated layout API using Flexbox CSS + mediaQuery</h2>
   </div>
 </div>
+<ul>
+  <li *ngFor="let page of links$ | async">
+    {{ page.route }} {{ page.arbitraryValue }}
+    <span *ngFor="let arrayItem of page.arbitraryArray">
+      {{ arrayItem }}
+    </span>
+  </li>
+</ul>
 <mat-divider></mat-divider>
 <div class="notes" fxLayout="row" fxLayoutAlign="center space-around" fxLayoutGap="100px">
   <div>

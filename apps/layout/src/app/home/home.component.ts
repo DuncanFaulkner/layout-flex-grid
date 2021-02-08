@@ -1,8 +1,20 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { ScullyRoutesService, ScullyRoute } from '@scullyio/ng-lib';
+import { Observable } from 'rxjs';
 @Component({
   selector: 'anglebrackets-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent {}
+export class HomeComponent implements OnInit {
+  links$: Observable<ScullyRoute[]> = this.scully.available$;
+
+  constructor(private scully: ScullyRoutesService) {}
+
+  ngOnInit(): void {
+    // debug current pages
+    this.links$.subscribe((links) => {
+      console.log(links);
+    });
+  }
+}
